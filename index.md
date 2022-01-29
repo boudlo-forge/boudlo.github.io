@@ -3,4 +3,4 @@ layout: base
 ---
 ## Boudlo Blog
 
-This is a blog for my various musings.
+This is a blog for my various musings, testing the layout.
