@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "What do I need to know about NFTs as a compliance officer?"
+author: Jim Rouse
 ---
 
 # What the hell is an NFT?
