@@ -10,7 +10,7 @@ blockquote {
   border-left:3px solid rgb(210, 0, 0);
 }
 
-img.logo {
+#logo {
   height: 80px;
   float: left;
   margin-right: 1.5em;
