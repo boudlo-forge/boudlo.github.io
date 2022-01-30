@@ -5,7 +5,7 @@ layout: default
 <div class="post">
 	<small>{{ page.date | date: "%-d %B %Y" }} | {% if page.tags.size %} tags: <em>{{ page.tags | join: "</em>, <em>" }}</em>{% endif %}</small>
 	<h1>{{ page.title }}</h1>
-	<p class="view">by {{ page.author | default: site.author }}</p>
+	<p class="view"><small>by {{ page.author | default: site.author }}</small></p>
 </div>
 
 {{content}}
