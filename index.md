@@ -1,3 +1,7 @@
+---
+layout: welcome
+---
+
 ## Welcome
 
 My name is Jim and I'm a technical consultant in Guernsey. I started Boudlo Forge Ltd in 2015.

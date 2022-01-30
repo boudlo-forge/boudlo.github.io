@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div id="logo-wrapper">
+  <img src="{{ '/assets/images/BF-arrow-logo-white.png' | relative_url }}" id="logo" alttext="Boudlo Forge Ltd, Guernsey">
+</div>
+
+<div id="title">
+  <h1>{{ site.title | default: site.github.repository_name }}</h1>
+  <p>{{ site.description | default: site.github.project_tagline }}</p>
+  <hr>
+</div>
+
+{{ content }}

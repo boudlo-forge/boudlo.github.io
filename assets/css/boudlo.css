@@ -48,13 +48,15 @@ blockquote {
 #logo {
   height: 80px;
   float: left;
-  margin-right: 1.5em;
+  margin-right: 1em;
+  margin-top: 6px;
 }
 
 #header #logo {
   height: 40px;
   float: left;
   margin-right: 1em;
+  margin-top: 5px;
 }
 
 section #title {
