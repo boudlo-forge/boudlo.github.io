@@ -51,6 +51,12 @@ blockquote {
   margin-right: 1.5em;
 }
 
+#header #logo {
+  height: 40px;
+  float: left;
+  margin-right: 1em;
+}
+
 section #title {
   margin: 0 0 25px 0;
 }
