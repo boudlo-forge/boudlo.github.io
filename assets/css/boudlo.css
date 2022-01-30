@@ -27,7 +27,8 @@ blockquote {
   display: none;
 }
 
-#header nav ul li.social a {
+#header nav ul li.social a,
+#header nav ul li.social a:hover {
   background: none;
   border: none;
   box-shadow: none;
