@@ -2,9 +2,9 @@
 layout: welcome
 ---
 
-## Welcome
-
 ![Pixel Art Jim](/assets/images/pixel-jim.png){:style="float: left; margin: 0 14px 14px -20px; image-rendering: crisp-edges;"}
+
+## Welcome
 
 My name is Jim and I'm a technical consultant in Guernsey. I started Boudlo Forge Ltd in 2015.
 
