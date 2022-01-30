@@ -6,11 +6,13 @@ tags: emerging cryptocurrency compliance
 ---
 **Hello**, in this, my first blog post in a series of articles on emerging technologies and their effect on the compliance space, I will be trying to explain what NFTs are, and now to consider them in terms of your regular business activities. I hope you find it helpful. 
 
-`Short Answer:
+```
+Short Answer:
 They're like any asset with completely subjective value, think football cards.
 The market is rampant with hacks, scams, fakes and fraud.
 Anyone can open multiple anonymous 'wallets'
-It's easy to fake sales and inflate value, there is a high risk of money laundering.`
+It's easy to fake sales and inflate value, there is a high risk of money laundering.
+```
 
 ## What *is* NFT?
 
