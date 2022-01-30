@@ -14,6 +14,25 @@ blockquote {
   margin-right: 1em;
 }
 
+#header nav ul li.social {
+  float: right;
+  margin-left: 0.2em;
+}
+
+#header nav ul li .button-label {
+  margin: 0 0.5em;
+}
+
+#header nav ul li.social .button-label {
+  display: none;
+}
+
+#header nav ul li.social a {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
 #header nav {
   background: none;
 }
