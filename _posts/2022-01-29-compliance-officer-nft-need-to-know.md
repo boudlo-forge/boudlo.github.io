@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What do I need to know about Cryptocurrency and NFTs as a compliance officer?"
+title:  "What do I need to know about Cryptocurrency and NFTs as a Compliance Officer?"
 author: Jim Rouse
 tags: emerging cryptocurrency compliance
 ---
