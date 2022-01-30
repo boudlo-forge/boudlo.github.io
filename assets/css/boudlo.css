@@ -10,6 +10,10 @@ blockquote {
   border-left:3px solid rgb(210, 0, 0);
 }
 
+#header nav ul li.fork {
+  margin-right: 1em;
+}
+
 #header nav {
   background: none;
 }
