@@ -9,3 +9,14 @@ a:hover {
 blockquote {
   border-left:3px solid rgb(210, 0, 0);
 }
+
+img.logo {
+  height: 80px;
+  float: left;
+  margin-right: 1.5em;
+}
+
+section #title h1,
+section #title p {
+  text-align: left;
+}
