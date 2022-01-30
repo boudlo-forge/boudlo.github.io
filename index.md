@@ -4,7 +4,7 @@ layout: welcome
 
 ## Welcome
 
-![Pixel Art Jim](/assets/images/pixel-jim.png){:style="width: 32px; height: 32px; float: left; margin: 0 14px 14px -20px; image-rendering: crisp-edges;"}
+![Pixel Art Jim](/assets/images/pixel-jim.png){:style="width: 32px; height: 32px; float: left; margin: 0 8px 14px -5px; image-rendering: crisp-edges;"}
 
 My name is Jim and I'm a technical consultant in Guernsey.
 
