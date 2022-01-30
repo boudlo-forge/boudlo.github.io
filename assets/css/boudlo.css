@@ -16,6 +16,10 @@ blockquote {
   margin-right: 1.5em;
 }
 
+section #title {
+  margin: 0 0 25px 0;
+}
+
 section #title h1,
 section #title p {
   text-align: left;
