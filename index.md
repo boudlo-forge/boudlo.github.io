@@ -1,3 +1,5 @@
-## Boudlo Blog
+## Welcome
 
-This is a blog for my various musings, testing the layout.
+My name is Jim and I'm a technical consultant in Guernsey. 
+
+I have over 15 years of experience building enterprise systems for everything from e-commerce, landmine/UXO clearance, CDD processing, airline operations, and more. Recently stepped into the compliance world, getting my advanced certificate from the ICA, bringing my risk management, cyber-security and data protection knowledge to bear supporting <a href="https://horsepool.gg" target="_blank">Horsepool Consulting</a>.
