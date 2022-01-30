@@ -1,0 +1,11 @@
+a {
+  color: rgb(210, 0, 0);
+  
+  &:hover {
+    color: #ffeb9b;
+  }
+}
+
+blockquote {
+  border-left:3px solid rgb(210, 0, 0);
+}
