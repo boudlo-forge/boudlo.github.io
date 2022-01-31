@@ -8,7 +8,7 @@ tags: emerging cryptocurrency compliance
 
 ![Pixel Art Jim](/assets/images/pixel-jim.png){:style="float: left; margin: 0 14px 8px 0; image-rendering: crisp-edges;"}
 > **The Short Answer:**  
-> NFTs are a type of digital asset. They're like any asset with subjective value, think football cards. The market is rampant with hacks, scams, fakes and fraud. Anyone can open multiple anonymous 'wallets' and trade them between to fake sales and inflate value. There is a high risk of money laundering.
+> NFTs are a type of digital asset. They're like any asset with subjective value, think football cards. They are typically linked to a media file like an image, video or audio file. They don't intrinsically confer any IP rights to the media they link to. The market is rampant with hacks, scams, fakes and fraud. Anyone can open multiple anonymous 'wallets' and trade them between to fake sales and inflate value. This can appear like legitimate purchases on the 'ledger'. There is a high risk of money laundering.
 
 ## What *is* an NFT?
 
