@@ -14,7 +14,7 @@ tags: emerging cryptocurrency compliance
 
 It's a Non-Fungible Token of course, you know how you hate when your tokens get funged? No? Sounds completely incomprehensible? Don't worry, you're not alone.
 
-You have probably heard of cryptocurrencies, or at the very least Bitcoin. There are a lot of them around but only some are suitable for NFTs, the original and biggest when it comes to NFTs is Ethereum (or ETH for short). Like pounds/dollars/euros/etc a regular unit of Ethereum is mutually interchangeable with each other, they are *fungible*.
+You have probably heard of cryptocurrencies, or at the very least Bitcoin. There are quite a few different cryptocurrencies around but only some are suitable for NFTs, the original and biggest when it comes to NFTs is Ethereum (or ETH for short). Like pounds/dollars/euros/etc a regular unit of Ethereum is mutually interchangeable with each other, they are *fungible*.
 
 ### So how do you make something non-fungible?
 
