@@ -116,4 +116,9 @@ section #title p {
   section {
     margin-top: 55px;
   }
+
+  #footer section {
+    margin: 0;
+    padding: 0;
+  }
 }
