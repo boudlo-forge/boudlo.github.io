@@ -110,6 +110,7 @@ section #title p {
     float: none;
     text-align: center;
     display: block;
+    margin: 20px auto;
   }
 
   section {
