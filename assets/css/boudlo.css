@@ -104,4 +104,11 @@ section #title p {
 @media screen and (max-width: 480px) {
   #header { margin-top: 0 }
   #header nav { display: block }
+
+  .footer section .credits.left,
+  .footer section .credits.right {
+    float: none;
+    text-align: center;
+    display: block;
+  }
 }
