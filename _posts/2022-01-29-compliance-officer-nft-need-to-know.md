@@ -22,7 +22,7 @@ You have probably heard of cryptocurrencies, or at the very least Bitcoin. There
 
 ### That's it?
 
-Yeah basically. It's now a unique line on the big Ethereum ledger in the cloud, and it's not directly interchangeable with regular ETH tokens. And yes, it's just a link. It's a common misconception that the media itself is stored on the blockchain ledger, but this isn't so. To store the data required for a whole file it would cost a huge amount of ETH.
+Yeah basically. It's now a unique line on the big Ethereum ledger in the cloud, and it's not directly interchangeable with regular ETH tokens. And yes, it's just a link to a file on the web somewhere. It's a common misconception that the media itself is stored on the blockchain ledger, but this is not the case. To store the data required for a whole file it would cost a huge amount of ETH.
 
 ### Where's the value?
 
