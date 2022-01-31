@@ -6,16 +6,11 @@ tags: emerging cryptocurrency compliance
 ---
 **Hello**, in this, my first blog post in a series of articles on emerging technologies and their effect on the compliance space, I will be trying to explain what NFTs are, and now to consider them in terms of your regular business activities. I hope you find it helpful. 
 
-## What *is* an NFT?
-
 ![Pixel Art Jim](/assets/images/pixel-jim.png){:style="float: left; margin: 0 14px 8px 0; image-rendering: crisp-edges;"}
-> **Short Answer:**  
-> They're a digital asset.
-> They're like any asset with subjective value, think football cards.  
-> The market is rampant with hacks, scams, fakes and fraud.  
-> Anyone can open multiple anonymous 'wallets'.  
-> It's easy to fake sales and inflate value.  
-> There is a high risk of money laundering.
+> **The Short Answer:**  
+> NFTs are a type of digital asset. They're like any asset with subjective value, think football cards. The market is rampant with hacks, scams, fakes and fraud. Anyone can open multiple anonymous 'wallets' and trade them between to fake sales and inflate value. There is a high risk of money laundering.
+
+## What *is* an NFT?
 
 It's a Non-Fungible Token of course, you know how you hate when your tokens get funged? No? Sounds completely incomprehensible? Don't worry, you're not alone.
 
@@ -23,7 +18,7 @@ You have probably heard of cryptocurrencies, or at the very least Bitcoin. There
 
 ### So how do you make something non-fungible?
 
-**This is an over-simplified analogy, and it's not 100% accurate, but it's the easiest way I can think of to explain it.** Say you took twenty five individual dollar bills and glued them together into a flip book. On each page of the money flip book you write one letter of a web address. At that web address is a piece of media like a picture, video or audio file. Thats basically what an NFT is, and how it works, in relation to a cryptocurrency like Ethereum.
+**This is an over-simplified analogy, and it's not 100% accurate, but it's the easiest way I can think of to explain it.** Say you took twenty five individual dollar bills and glued them together into a flip book. On each page of the money flip book you write one letter of a web address. If you go to that web address you get a piece of media like a picture, video or audio file. Thats basically what an NFT is, and how it works, in relation to a cryptocurrency like Ethereum.
 
 ### That's it?
 
