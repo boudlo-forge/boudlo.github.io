@@ -111,4 +111,8 @@ section #title p {
     text-align: center;
     display: block;
   }
+
+  section {
+    margin-top: 55px;
+  }
 }
