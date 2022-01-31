@@ -47,6 +47,12 @@ blockquote {
   box-shadow: none;
 }
 
+#header nav ul li.social a,
+#header nav ul li.social a:hover {
+  padding:  6px;
+  font-size: 18px;
+}
+
 #header nav {
   background: none;
 }
