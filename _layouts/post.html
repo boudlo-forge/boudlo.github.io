@@ -1,21 +1,26 @@
 ---
 layout: default
 ---
+<div class="post-wrapper">
+  <div class="post">
+    <small>{{ page.date | date: "%-d %B %Y" }} {% if page.tags.size %} | tags: <em>{{ page.tags | join: "</em>, <em>" }}</em>{% endif %}</small>
+    <h1>{{ page.title }}</h1>
+    <p class="byline"><small>by {{ page.author | default: site.author }}</small></p>
 
-<div class="post">
-	<small>{{ page.date | date: "%-d %B %Y" }} | {% if page.tags.size %} tags: <em>{{ page.tags | join: "</em>, <em>" }}</em>{% endif %}</small>
-	<h1>{{ page.title }}</h1>
-	<p class="view"><small>by {{ page.author | default: site.author }}</small></p>
+    {{content}}
+
+  </div>
+
+  <hr>
+
+  <div class="more-posts">
+    <h3>Latest Posts</h3>
+    <ul>
+      {% for post in site.posts limit:5 %}
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
-
-{{content}}
-
-<br>
-<h3>Latest Posts</h3>
-<ul>
-  {% for post in site.posts limit:5 %}
-    <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>

@@ -108,18 +108,26 @@ section #title p {
 }
 
 p.post-image {
-  background-color: rgba(255,255,255,0.1);
+  display: inline-block;
+  background-color: rgba(0,0,0,0.1);
   font-size: 0.8em;
-  text-align: left;
   line-height: 1.4em;
-  padding: 0 0 0.3em 0;
-  text-indent: 0.5em;
+  padding: 0;
+  position: relative;
 }
 
 p.post-image img {
   max-width: 100%;
   display: block;
-  float: right;
+}
+
+p.post-image em {
+  display: inline;
+  padding: 0.2em 0.5em;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(1,1,1,0.5);
+  color: white;
 }
 
 @media screen and (max-width: 480px) {
