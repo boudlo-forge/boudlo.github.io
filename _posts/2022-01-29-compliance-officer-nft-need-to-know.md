@@ -9,6 +9,8 @@ tags: emerging cryptocurrency compliance
 
 **Hello**, in this, my first blog post in a series of articles on emerging technologies and their effect on the compliance space, I will be trying to explain what NFTs are, and now to consider them in terms of your regular business activities. I hope you find it helpful. 
 
+<!-- excerpt-end -->
+
 ![Pixel Art Jim]({{site.baseurl}}/assets/images/pixel-jim.png){:style="float: left; margin: 0 14px 8px 0; image-rendering: crisp-edges;"}
 > **The Short Answer:**  
 > They're like any asset with subjective value; think football cards or beanie babies. They are typically linked to a media file like an image, video or audio file. They do not contain the media they link to. They don't intrinsically confer any IP rights to the media they link to. The market is rampant with hacks, scams, fakes and fraud. Anyone can open multiple anonymous 'wallets' and trade them between to fake sales and inflate value. This can appear like legitimate purchases on the 'ledger'. There is a high risk of money laundering. Marketing NFTs to consumer investors is likely to be frowned on by regulators, due to their highly volatile and complex nature.
