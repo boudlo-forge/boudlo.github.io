@@ -10,7 +10,16 @@ layout: default
   {% for post in site.posts %}
     <li>
       <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-      <small>{{ post.excerpt | strip_html | strip_newlines }}</small>
+      <p>
+        {% assign excerptParts = post.excerpt | split: "<!-- excerpt-start -->" %}
+        {% if excerptParts[1] and excerptParts[1] != '' %}
+          {{ excerptParts[1] | strip_newlines | strip_html | truncatewords: 75 }}
+        {% else %}
+          {{ post.excerpt | strip_newlines | strip_html | truncatewords: 75 }}
+        {% endif %}
+        <br>
+        <a href="{{ post.url | relative_url }}">read more</a>
+      </p>
     </li>
   {% endfor %}
 </ul>
