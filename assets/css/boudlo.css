@@ -109,7 +109,6 @@ section #title p {
 
 p.post-image {
   display: inline-block;
-  background-color: rgba(0,0,0,0.1);
   font-size: 0.8em;
   line-height: 1.4em;
   padding: 0;
@@ -126,7 +125,7 @@ p.post-image[data-annotation]::after {
   padding: 0.2em 0.5em;
   position: absolute;
   bottom: 0;
-  background-color: rgba(1,1,1,0.5);
+  background-color: rgba(1,1,1,0.75);
   color: white;
   z-index: 2;
 }
