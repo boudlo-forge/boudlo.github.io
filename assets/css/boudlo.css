@@ -121,13 +121,14 @@ p.post-image img {
   display: block;
 }
 
-p.post-image em {
-  display: inline;
+p.post-image[data-annotation]::after {
+  content: attr(data-annotation);
   padding: 0.2em 0.5em;
   position: absolute;
   bottom: 0;
   background-color: rgba(1,1,1,0.5);
   color: white;
+  z-index: 2;
 }
 
 @media screen and (max-width: 480px) {
