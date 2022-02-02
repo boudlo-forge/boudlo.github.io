@@ -5,7 +5,7 @@ author: Jim Rouse
 tags: emerging cryptocurrency compliance
 ---
 ![The First 5000 Days]({{site.baseurl}}/assets/images/the-first-5000-days.jpg){:style="max-width:100%"}
-The First 5000 Days, by Beeple
+The First 5000 Days, by Beeple{:class="post-image"}
 
 **Hello**, in this, my first blog post in a series of articles on emerging technologies and their effect on the compliance space, I will be trying to explain what NFTs are, and now to consider them in terms of your regular business activities. I hope you find it helpful. 
 
@@ -46,8 +46,8 @@ So for a hypothetical criminal, trying to launder criminal proceeds into a legit
 
 How much does one NFT sell for? The most expensive sale at the time of writing was Pak's 'The Merge', pictured below, at an equivalent of $91.8m, yes, **Ninety One Point Eight Million Dollars**. So basically, the sky is the limit. My advice would be not to accept NFT sales as a client source of wealth without being very sure that the sale and transactions surrounding it were legitimate.
 
-![Pak's 'The Merge', no really]({{site.baseurl}}/assets/images/pak-merge-nft.jpeg){:style="max-width:100%"}
-Pak's 'The Merge', $91.8m. No, really.
+![Pak's 'The Merge', no really]({{site.baseurl}}/assets/images/pak-merge-nft.jpeg){:style="max-width:100%;display:block;"}
+Pak's 'The Merge', $91.8m. No, really.{:class="post-image"}
 
 ### As an asset to trade
 

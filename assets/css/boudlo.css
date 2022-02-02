@@ -107,6 +107,21 @@ section #title p {
   margin-top: 0.2em;
 }
 
+p.post-image {
+  background-color: rgba(255,255,255,0.1);
+  font-size: 0.8em;
+  text-align: left;
+  line-height: 1.4em;
+  padding: 0 0 0.3em 0;
+  text-indent: 0.5em;
+}
+
+p.post-image img {
+  max-width: 100%;
+  display: block;
+  float: right;
+}
+
 @media screen and (max-width: 480px) {
   #header { margin-top: 0 }
   #header nav { display: block }
