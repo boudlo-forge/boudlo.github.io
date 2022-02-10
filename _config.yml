@@ -2,3 +2,4 @@ theme: jekyll-theme-midnight
 title: Boudlo Forge
 description: Just a place for my thoughts on technology, regulation, local issues, personal projects and more.
 excerpt_separator: <!-- excerpt-end -->
+future: false
