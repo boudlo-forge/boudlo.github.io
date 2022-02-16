@@ -33,7 +33,7 @@
 				border-image-width: 20px 20px 20px 20px;
 				border-image-outset: 0px 0px 0px 0px;
 				border-image-repeat: round round;
-				border-image-source: url("assets/images/skull-socialism.png");
+				border-image-source: url("/assets/images/skull-socialism.png");
 			}
 
 			.socialism.scary {
@@ -60,7 +60,7 @@
 					border-image-width: 20px 20px 20px 20px;
 					border-image-outset: 0px 0px 0px 0px;
 					border-image-repeat: round round;
-					border-image-source: url("assets/images/skull-socialism.png");
+					border-image-source: url("/assets/images/skull-socialism.png");
 				}
 			}
 
@@ -462,6 +462,20 @@
 
 				measureSocialism(marginalIncomeTaxRate1, marginalIncomeTaxMargin1, marginalIncomeTaxMargin1Input);
 
+				var marginalIncomeTaxRate2Input = document.getElementById("income-tax-rate-2");
+				var marginalIncomeTaxRate2 = cln(marginalIncomeTaxRate2Input.value);
+				var marginalIncomeTaxMargin2Input = document.getElementById("income-tax-margin-2");
+				var marginalIncomeTaxMargin2 = 1000 * cln(marginalIncomeTaxMargin2Input.value);
+
+				measureSocialism(marginalIncomeTaxRate2, marginalIncomeTaxMargin2, marginalIncomeTaxMargin2Input);
+
+				var marginalIncomeTaxRate3Input = document.getElementById("income-tax-rate-3");
+				var marginalIncomeTaxRate3 = cln(marginalIncomeTaxRate3Input.value);
+				var marginalIncomeTaxMargin3Input = document.getElementById("income-tax-margin-3");
+				var marginalIncomeTaxMargin3 = 1000 * cln(marginalIncomeTaxMargin3Input.value);
+
+				measureSocialism(marginalIncomeTaxRate3, marginalIncomeTaxMargin3, marginalIncomeTaxMargin3Input);
+
 				var taxableIncomeInput = document.getElementById("taxable-pay");
 				var taxableIncome = cln(taxableIncomeInput.value);
 
@@ -560,7 +574,7 @@
 
 			function measureSocialism(rate, margin, childElement) {
 				if (typeof rate !== 'undefined' && typeof margin !== 'undefined' && typeof childElement !== 'undefined') {
-					if(!isNaN(rate) && !isNaN(margin)) {
+					if(!isNaN(rate) && rate > 0 && !isNaN(margin) && margin > 0) {
 						if(rate >= 90 && margin >= 100000) {
 							childElement.closest(".gstCalculator").classList.add("socialismFlicker");
 
