@@ -1,0 +1,597 @@
+<html>
+	<head>
+		<title>The GST Calculator</title>
+		<style>
+			body {
+				font-family: sans-serif;
+				padding: 0;
+				margin: 0;
+			}
+
+			body section {
+				width: 100%;
+				margin: 0 auto;
+				box-sizing: border-box;
+				max-width: 440px;
+			}
+
+			h2 {
+				font-size: 1.3em;
+				color: #666;
+			}
+
+			.gstCalculator {
+				padding: 1em 22px;
+				border-style: solid;
+				border-color: rgba(255,255,255,0);
+			}
+
+			.socialism {
+				background-color: #FFF;
+				border-color: rgba(255,255,255,0);
+				border-image-slice: 36 37 35 34;
+				border-image-width: 20px 20px 20px 20px;
+				border-image-outset: 0px 0px 0px 0px;
+				border-image-repeat: round round;
+				border-image-source: url("assets/images/skull-socialism.png");
+			}
+
+			.socialism.scary {
+				filter:  invert(1);
+				backdrop-filter: invert(1);
+			}
+
+			.socialismFlicker {
+				border-color: rgba(255,255,255,0);
+				animation: flicker 5s linear infinite;
+				background-color: #FFF;
+			}
+
+			@keyframes flicker {
+				0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+					border-image-slice: unset;
+					border-image-width: unset;
+					border-image-outset: unset;
+					border-image-repeat: unset;
+					border-image-source: unset;
+				}
+				20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+					border-image-slice: 36 37 35 34;
+					border-image-width: 20px 20px 20px 20px;
+					border-image-outset: 0px 0px 0px 0px;
+					border-image-repeat: round round;
+					border-image-source: url("assets/images/skull-socialism.png");
+				}
+			}
+
+			.calcFormWrapper,
+			.contentWrapper {
+				margin: 0.5em;
+			}
+
+			.formBlock {
+				margin: 0.5em 0 1em;
+				position: relative;
+				max-width: 100%;
+				text-align: right;
+			}
+
+			.formBlock label {
+				display: inline-block;
+				width: 220px;
+				padding: 0.3em 0;
+				position: absolute;
+				top: 0; left:  0;
+				text-align: left;
+				font-size: 0.9em;
+				font-weight: bold;
+				color: #333;
+			}
+
+			.formBlock input,
+			span.userResult {
+				display: inline-block;
+				width: 220px;
+				max-width: 30%;
+				padding: 0.3em;
+				box-sizing: border-box;
+			}
+
+			.formBlock input[readonly] {
+				background-color: #eee;
+			}
+
+			.formBlock .shortInput {
+				display: inline-block;
+				position: relative;
+			}
+
+			.formBlock .shortInput input {
+				width: 55px;
+				max-width: 55px;
+			}
+
+			.formBlock input.prefixed,
+			span.userResult.prefixed {
+				padding-left: 1.5em;
+			}
+
+			.formBlock input.suffixed,
+			span.userResult.suffixed {
+				padding-right: 1.5em;
+				text-align: right;
+			}
+
+			span.userResult.prefixed {
+				text-align: left;
+			}
+
+			.formBlock.drivenValue span.userResult {
+				font-weight: bold;
+				min-height: 35px;
+				font-size: 20px;
+				background-color: #eee;
+				max-width: 40%;
+			}
+
+			.formBlock.drivenValue span.userResult.positive {
+				background: #cfc;
+			}
+
+			.formBlock.drivenValue span.userResult.negative {
+				background: #fcc;
+				color: ;
+			}
+
+			#personalResultBlock .formBlock.drivenValue i {
+				font-size: 20px;
+			}
+
+			#personalResultBlock .formBlock.drivenValue label {
+				font-size: 18px;
+			}
+
+			.formBlock i {
+				font-size: 0.9em;
+				position: relative;
+				left: 1.4em;
+				pointer-events: none;
+			}
+
+			.formBlock i.suffix {
+				position: absolute;
+				right: 0.3em;
+				top: 0.4em;
+			}
+
+			.formBlock .radioButtonGroup {
+				width: 220px;
+				display: inline-block;
+			}
+
+			.formBlock .radioButtonGroup .radioOption {
+				width:  220px;
+				padding: 0.3em 0;
+				text-align: left;
+			}
+
+			.formBlock .radioButtonGroup .radioOption label {
+				display: inline;
+				position: relative;
+			}
+
+			.formBlock .radioButtonGroup input[type=radio] {
+				display: inline-block;
+				width: 22px;
+				padding: 0.3em;
+			}
+
+			.formBlock small {
+				display: block;
+				width: 100%;
+				max-width: 440px;
+				font-size: 0.6em;
+				color: #666;
+			}
+		</style>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+		<section class="gstCalculator">
+			<div class="contentWrapper">
+				<h1>Guernsey Income / GST / Cost of Living Calculator</h1>
+			</div>
+			<div class="calcFormWrapper">
+				<form id="gstCalcForm" action="#">
+					<h2>Income Tax</h2>
+					<div class="formBlock">
+						<label>Guernsey Income</label>
+						<i>&pound;</i>
+						<input class="userInput prefixed" id="salary" placeholder="23851" onkeyup="calcPersonal()" />
+						<small>Average Guernsey salary is currently &pound;23,851</small>
+					</div>
+
+					<div class="formBlock">
+						<label>Are you self-employed?</label>
+						<div class="radioButtonGroup">
+							<div class="radioOption">
+								<input class="userInput prefixed" type="radio" id="self-employed-no" name="self-employed" value="no" checked /><label class="radioLabel" for="self-employed-no">No</label>
+							</div>
+							<div class="radioOption">
+								<input class="userInput prefixed" type="radio" id="self-employed-yes" name="self-employed" value="yes" /><label class="radioLabel" for="self-employed-yes">Yes</label>
+							</div>
+						</div>
+					</div>
+					
+					<div class="formBlock">
+						<label>Tax Coding</label>
+						<input class="userInput" id="coding" placeholder="1015" onkeyup="calcPersonal()" />
+						<small>The most common coding is 1015, if you don't know it, just enter a Personal Allowance manually below</small>
+					</div>
+					
+					<div class="formBlock">
+						<label>Personal Allowance</label>
+						<i>&pound;</i>
+						<input class="userInput prefixed" id="allowance" placeholder="12175" onkeyup="calcPersonal()" />
+						<small>Base tax allowance is currently &pound;12,175</small>
+					</div>
+
+					<div class="formBlock drivenValue">
+						<label>Taxable Pay</label>
+						<i>&pound;</i>
+						<input class="userInput prefixed" id="taxable-pay" readonly placeholder="0" />
+						<small>&pound; per Year Minus Allowance</small>
+					</div>
+
+					<div id="taxAmounts">
+						<div class="formBlock drivenValue">
+							<label>Total Income Tax</label>
+							<i>&pound;</i>
+							<input class="userInput prefixed" id="income-tax-total" readonly placeholder="0" />
+							<small>From &pound;<span class="driven-allowance">12,175</span> to &pound;<span class="driven-cap">1,300,000</span></small>
+						</div>
+					</div>
+
+					<div id="taxAmounts">
+						<div class="formBlock drivenValue">
+							<label>Effective Income Tax Rate</label>
+							<input class="userInput suffixed" id="income-tax-effective" readonly placeholder="0" />
+							<i class="suffix">&percnt;</i>
+							<small>Percentage of your total income taxed.</small>
+						</div>
+					</div>
+					<h2>Your Outgoings</h2>
+					<div class="formBlock">
+						<label>Housing</label>
+						<i>&pound;</i>
+						<input class="userInput prefixed" id="housing" placeholder="1650" onkeyup="calcPersonal()" />
+						<small>&pound; per Month on Board/Rent/Mortgage/TRP</small>
+					</div>
+					<div class="formBlock">
+						<label>Houshold shopping</label>
+						<i>&pound;</i>
+						<input class="userInput prefixed" id="household" placeholder="500" onkeyup="calcPersonal()" />
+						<small>&pound; per Month on food, drink, household consumables.</small>
+					</div>
+					<div class="formBlock">
+						<label>Electricity</label>
+						<i>&pound;</i>
+						<input class="userInput prefixed" id="electricity" placeholder="135" onkeyup="calcPersonal()" />
+						<small>&pound; per Month</small>
+					</div>
+					<div class="formBlock">
+						<label>Phone / Internet</label>
+						<i>&pound;</i>
+						<input class="userInput prefixed" id="phone" placeholder="50" onkeyup="calcPersonal()" />
+						<small>&pound; per Month</small>
+					</div>
+					<div class="formBlock">
+						<label>Fuel for heating / cooking</label>
+						<i>&pound;</i>
+						<input class="userInput prefixed" id="household-fuel" placeholder="100" onkeyup="calcPersonal()" />
+						<small>&pound; per Month</small>
+					</div>
+					<div class="formBlock">
+						<label>Insurance</label>
+						<i>&pound;</i>
+						<input class="userInput prefixed" id="insurance" placeholder="100" onkeyup="calcPersonal()" />
+						<small>&pound; per Month on house / car / other insurance</small>
+					</div>
+					<div class="formBlock">
+						<label>Repayments</label>
+						<i>&pound;</i>
+						<input class="userInput prefixed" id="repayments" placeholder="100" onkeyup="calcPersonal()" />
+						<small>&pound; per Month - Repayments for financing, loans, student debt, etc.</small>
+					</div>
+					<div class="formBlock">
+						<label>Clothes / Shoes</label>
+						<i>&pound;</i>
+						<input class="userInput prefixed" id="clothing" placeholder="50" onkeyup="calcPersonal()" />
+						<small>&pound; per Month</small>
+					</div>
+					<div class="formBlock">
+						<label>Leisure / Hobbies</label>
+						<i>&pound;</i>
+						<input class="userInput prefixed" id="leisure" placeholder="50" onkeyup="calcPersonal()" />
+						<small>&pound; per Month on hobbies, memberships, etc.</small>
+					</div>
+					<div class="formBlock">
+						<label>Eating Out</label>
+						<i>&pound;</i>
+						<input class="userInput prefixed" id="eating-out" placeholder="50" onkeyup="calcPersonal()" />
+						<small>&pound; per Month on food & drink on restaurants, takeaways, lunch, etc</small>
+					</div>
+					<div class="formBlock">
+						<label>Houshold appliances</label>
+						<i>&pound;</i>
+						<input class="userInput prefixed" id="appliances" placeholder="100" onkeyup="calcPersonal()" />
+						<small>&pound; per Year on replacing / maintaining TVs, white goods, vacuum cleaners, etc.</small>
+					</div>
+					<div class="formBlock">
+						<label>Fuel for Transport</label>
+						<i>&pound;</i>
+						<input class="userInput prefixed" id="transport-fuel" placeholder="50" onkeyup="calcPersonal()" />
+						<small>&pound; per Month - Vehicle financing, loan repayments, student debt, etc.</small>
+					</div>
+					<div class="formBlock">
+						<label>Essential Vehicle Purchases</label>
+						<i>&pound;</i>
+						<input class="userInput prefixed" id="vehicles" placeholder="1000" onkeyup="calcPersonal()" />
+						<small>&pound; per Year - Outright purchases of Cars, Bikes, eBikes, Bicycles</small>
+					</div>
+					<div id="taxLevers">
+						<h2>Tax</h2>
+						<div class="formBlock">
+							<label>GST Rate</label>
+							<input class="userInput suffixed" id="gst-tax-rate-0" placeholder="5" value="5" onkeyup="calcPersonal()" />
+							<i class="suffix">&percnt;</i>
+						</div>
+						<div class="formBlock">
+							<label>Income Tax Base Rate</label>
+							<input class="userInput suffixed" id="income-tax-rate-0" placeholder="20" value="20" onkeyup="calcPersonal()" />
+							<i class="suffix">&percnt;</i>
+						</div>
+						<div class="formBlock">
+							<label>Add a Marginal Rate</label>
+							<div class="shortInput">
+								<input class="userInput suffixed" id="income-tax-rate-1" placeholder="" onkeyup="calcPersonal()" />
+								<i class="suffix">&percnt;</i>
+							</div>
+							over
+							<div class="shortInput">
+								<input class="userInput suffixed" id="income-tax-margin-1" placeholder="" onkeyup="calcPersonal()" />
+								<i class="suffix">k</i>
+							</div>
+						</div>
+						<div class="formBlock">
+							<label>Add a Marginal Rate</label>
+							<div class="shortInput">
+								<input class="userInput suffixed" id="income-tax-rate-2" placeholder="" onkeyup="calcPersonal()" />
+								<i class="suffix">&percnt;</i>
+							</div>
+							over
+							<div class="shortInput">
+								<input class="userInput suffixed" id="income-tax-margin-2" placeholder="" onkeyup="calcPersonal()" />
+								<i class="suffix">k</i>
+							</div>
+						</div>
+						<div class="formBlock">
+							<label>Add a Marginal Rate</label>
+							<div class="shortInput">
+								<input class="userInput suffixed" id="income-tax-rate-3" placeholder="" onkeyup="calcPersonal()" />
+								<i class="suffix">&percnt;</i>
+							</div>
+							over
+							<div class="shortInput">
+								<input class="userInput suffixed" id="income-tax-margin-3" placeholder="" onkeyup="calcPersonal()" />
+								<i class="suffix">k</i>
+							</div>
+						</div>
+						<div class="formBlock">
+							<label>Employee Social Rate</label>
+							<input class="userInput suffixed" id="personal-social-rate" placeholder="6.8" value="6.8" onkeyup="calcPersonal()" />
+							<i class="suffix">&percnt;</i>
+						</div>
+						<div class="formBlock">
+							<label>Employer Social Rate</label>
+							<input class="userInput suffixed" id="employer-social-rate" placeholder="6.7" value="6.7" onkeyup="calcPersonal()" />
+							<i class="suffix">&percnt;</i>
+						</div>
+						<div class="formBlock">
+							<label>Self-employed Social Rate</label>
+							<input class="userInput suffixed" id="self-employed-social-rate" placeholder="11" value="11" onkeyup="calcPersonal()" />
+							<i class="suffix">&percnt;</i>
+						</div>
+
+					</div>
+				</form>
+			</div>
+			<div class="contentWrapper">
+				<h2>Result</h2>
+				<div id="personalResultBlock">
+					<div class="formBlock drivenValue">
+						<label>Taxable Pay</label>
+						<i>&pound;</i>
+						<span id="taxable-pay-result" class="userResult prefixed driven-taxable-pay">&nbsp;</span>
+						<small>&pound; per Year Minus Allowance</small>
+					</div>
+					<div class="formBlock drivenValue">
+						<label>Total Income Tax</label>
+						<i>&pound;</i>
+						<span id="total-income-tax-result" class="userResult prefixed driven-income-tax-total">&nbsp;</span>
+						<small>&pound; per Year</small>
+					</div>
+					<div class="formBlock drivenValue">
+						<label>Effective Tax Rate</label>
+						<span id="total-income-tax-result" class="userResult suffixed driven-income-tax-effective">&nbsp;</span>
+						<i class="suffix">&percnt;</i>
+						<small>&pound; per Year</small>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script>
+
+			document.addEventListener('DOMContentLoaded', function(event) {
+				calcPersonal();
+			})
+
+			function calcPersonal() {
+				var localIncomeInput = document.getElementById("salary");
+				var localIncome = cln(localIncomeInput.value);
+				console.log("Local Income: £" + nlc(localIncome));
+
+				var selfEmployedNoInput = document.getElementById("self-employed-no");
+				var selfEmployedYesInput = document.getElementById("self-employed-yes");
+				var isSelfEmployed = selfEmployedYesInput.checked;
+				console.log("Is Self Employed: " + isSelfEmployed);
+
+				var personalAllowanceInput = document.getElementById("allowance");
+				var personalAllowance = cln(personalAllowanceInput.value);
+				console.log("Personal Allowance: £" + nlc(personalAllowance));
+
+				var baseIncomeTaxRateInput = document.getElementById("income-tax-rate-0");
+				var baseIncomeTaxRate = cln(baseIncomeTaxRateInput.value);
+				console.log("Base Income Rate: " + baseIncomeTaxRate);
+
+				var marginalIncomeTaxRate1Input = document.getElementById("income-tax-rate-1");
+				var marginalIncomeTaxRate1 = cln(marginalIncomeTaxRate1Input.value);
+				var marginalIncomeTaxMargin1Input = document.getElementById("income-tax-margin-1");
+				var marginalIncomeTaxMargin1 = 1000 * cln(marginalIncomeTaxMargin1Input.value);
+
+				measureSocialism(marginalIncomeTaxRate1, marginalIncomeTaxMargin1, marginalIncomeTaxMargin1Input);
+
+				var taxableIncomeInput = document.getElementById("taxable-pay");
+				var taxableIncome = cln(taxableIncomeInput.value);
+
+				if(!isNaN(localIncome) && !isNaN(personalAllowance)) {
+					taxableIncome = Math.max(0, localIncome - personalAllowance);
+					taxableIncomeInput.value = nlc(taxableIncome);
+				}
+
+				console.log("Taxable Income: £" + nlc(taxableIncome));
+
+				var incomeTaxTotalInput = document.getElementById("income-tax-total");
+				var incomeTaxTotal = cln(incomeTaxTotalInput.value);
+				
+				if(!isNaN(taxableIncome) &&
+				!isNaN(baseIncomeTaxRate)&&
+				!isNaN(localIncome)) {
+					incomeTaxTotal = (taxableIncome / 100)*baseIncomeTaxRate;
+					incomeTaxTotalInput.value = nlc(incomeTaxTotal);
+				}
+
+				var incomeTaxEffectiveInput = document.getElementById("income-tax-effective");
+				var incomeTaxEffective = cln(incomeTaxEffectiveInput.value);
+				
+				if(!isNaN(taxableIncome) &&
+				!isNaN(baseIncomeTaxRate)&&
+				!isNaN(localIncome)) {
+					incomeTaxEffective = incomeTaxTotal / (localIncome / 100);
+					incomeTaxEffectiveInput.value = nlc(incomeTaxEffective);
+				}
+
+				console.log("Income Tax Total: £" + nlc(incomeTaxTotal));
+
+				updateDrivenContent();
+			}
+
+			function updateDrivenContent() {
+				var personalAllowanceInput = document.getElementById("allowance");
+				var personalAllowance = cln(personalAllowanceInput.value);
+
+				var dpa = document.getElementsByClassName("driven-allowance");
+
+				for (var i = 0; i < dpa.length; i++) {
+					if(!isNaN(personalAllowance)) {
+				   		dpa.item(i).innerHTML = nlc(personalAllowance);
+					}
+				}
+
+				var taxableIncomeInput = document.getElementById("taxable-pay");
+				var taxableIncome = cln(taxableIncomeInput.value);
+
+				var dtp = document.getElementsByClassName("driven-taxable-pay");
+
+				for (var i = 0; i < dtp.length; i++) {
+					if(!isNaN(taxableIncome)) {
+						dtp.item(i).innerHTML = nlc(taxableIncome);
+					}
+				}
+
+				var incomeTaxTotalInput = document.getElementById("income-tax-total");
+				var incomeTaxTotal = cln(incomeTaxTotalInput.value);
+
+				var ditt = document.getElementsByClassName("driven-income-tax-total");
+
+				for (var i = 0; i < ditt.length; i++) {
+				  	if(!isNaN(incomeTaxTotal)) {
+				  		ditt.item(i).innerHTML = nlc(incomeTaxTotal);
+				  	}
+				}
+
+				var incomeTaxEffectiveInput = document.getElementById("income-tax-effective");
+				var incomeTaxEffective = cln(incomeTaxEffectiveInput.value);
+
+				var dite = document.getElementsByClassName("driven-income-tax-effective");
+
+				for (var i = 0; i < dite.length; i++) {
+				  	if(!isNaN(incomeTaxEffective)) {
+				  		dite.item(i).innerHTML = nlc(incomeTaxEffective);
+				  	}
+				}
+			}
+
+			// Non number characters (commas, whitespace, etc)
+			const numRE = /[^\.0-9]/ig;
+
+			function cln(currencyInput) {
+				if (typeof currencyInput !== 'undefined') {
+					return parseFloat(currencyInput.replaceAll(numRE,''));
+				}
+			}
+
+			function nlc(currencyOutput) {
+				if (typeof currencyOutput !== 'undefined') {
+					return currencyOutput.toLocaleString('en-GB', {maximumFractionDigits:2, minimumFractionDigits:2});
+				}
+			}
+
+			function measureSocialism(rate, margin, childElement) {
+				if (typeof rate !== 'undefined' && typeof margin !== 'undefined' && typeof childElement !== 'undefined') {
+					if(!isNaN(rate) && !isNaN(margin)) {
+						if(rate >= 90 && margin >= 100000) {
+							childElement.closest(".gstCalculator").classList.add("socialismFlicker");
+
+							if(rate >= 95 && margin >= 100000) {
+								childElement.closest(".gstCalculator").classList.remove("socialismFlicker");
+								childElement.closest(".gstCalculator").classList.add("socialism");
+								
+								if(rate >= 98 && margin >= 100000) {
+									childElement.closest(".gstCalculator").classList.add("scary");
+
+									if(rate == 100 && margin >= 100000) {
+										alert("It looks like you're considering a spooky Socialism. Welcome Comrade!");
+									}
+								} else {
+									childElement.closest(".gstCalculator").classList.remove("scary");
+								}
+							} else {
+								childElement.closest(".gstCalculator").classList.remove("socialism");
+								childElement.closest(".gstCalculator").classList.remove("scary");
+							}
+						} else {
+							childElement.closest(".gstCalculator").classList.remove("socialismFlicker");
+							childElement.closest(".gstCalculator").classList.remove("socialism");
+							childElement.closest(".gstCalculator").classList.remove("scary");
+						}
+
+						console.log("Margin 1 Income Rate: " + rate + "% over £" + nlc(margin));
+					}
+				}
+			}
+
+		</script> 
+	</body>
+</html>
