@@ -228,15 +228,15 @@
 					
 					<div class="formBlock">
 						<label>Tax Coding</label>
-						<input class="userInput" id="coding" placeholder="1015" onkeyup="calcPersonal()" />
-						<small>The most common coding is 1015, if you don't know it, just enter a Personal Allowance manually below</small>
+						<input class="userInput" id="coding" placeholder="1015" onkeyup="calcAllowanceFromCoding()" />
+						<small>The current base codings are 1015 monthly and 234 weekly, if you don't know it, just enter your total annual allowance manually below</small>
 					</div>
 					
 					<div class="formBlock">
 						<label>Personal Allowance</label>
 						<i>&pound;</i>
 						<input class="userInput prefixed" id="allowance" placeholder="12175" onkeyup="calcPersonal()" />
-						<small>Base tax allowance is currently &pound;12,175</small>
+						<small>Base annual tax allowance is currently &pound;12,175</small>
 					</div>
 
 					<div class="formBlock drivenValue">
@@ -345,11 +345,6 @@
 					<div id="taxLevers">
 						<h2>Tax</h2>
 						<div class="formBlock">
-							<label>GST Rate</label>
-							<input class="userInput suffixed" id="gst-tax-rate-0" placeholder="5" value="5" onkeyup="calcPersonal()" />
-							<i class="suffix">&percnt;</i>
-						</div>
-						<div class="formBlock">
 							<label>Income Tax Base Rate</label>
 							<input class="userInput suffixed" id="income-tax-rate-0" placeholder="20" value="20" onkeyup="calcPersonal()" />
 							<i class="suffix">&percnt;</i>
@@ -405,7 +400,12 @@
 							<input class="userInput suffixed" id="self-employed-social-rate" placeholder="11" value="11" onkeyup="calcPersonal()" />
 							<i class="suffix">&percnt;</i>
 						</div>
-
+						<div class="formBlock">
+							<label>GST Rate</label>
+							<input class="userInput suffixed" id="gst-tax-rate-0" placeholder="5" value="0" onkeyup="calcPersonal()" />
+							<i class="suffix">&percnt;</i>
+							<small>A Goods & Services Tax (GST)</small>
+						</div>
 					</div>
 				</form>
 			</div>
@@ -511,6 +511,25 @@
 				console.log("Income Tax Total: £" + nlc(incomeTaxTotal));
 
 				updateDrivenContent();
+			}
+
+			function calcAllowanceFromCoding() {
+				var taxCodingInput = document.getElementById("coding");
+				var taxCoding = cln(taxCodingInput.value);
+				var payPeriods = 12;
+
+				if(!isNaN(taxCoding)) {
+					if(taxCoding <= 500) {
+						payPeriods = 52;
+					}
+
+					console.log("Personal Allowance: £" + nlc(taxCoding*payPeriods));
+
+					var personalAllowanceInput = document.getElementById("allowance");
+					personalAllowanceInput.value = taxCoding*payPeriods;
+
+					calcPersonal();
+				}
 			}
 
 			function updateDrivenContent() {
