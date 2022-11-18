@@ -23,7 +23,7 @@ tags: food guernsey winter
 
 **THIS MAKES A BIG (circa 5L) BEAN JAR, IF YOU WANT LESS, HALVE THE INGREDIENTS.**
 
-1. First, feed the carrots you mistakenly bought/* to the nearest Donkey, they can't ruin your bean jar then and the Donkey will add to the ambience.
+1. First, feed the carrots you mistakenly bought to the nearest Donkey, they can't ruin your bean jar then and the Donkey will add to the ambience.
 
 2. Soak the beans in a large bowl of water over night, at least 12 hours. When drained you'll have about a kg of wet beans.
 
