@@ -49,6 +49,7 @@ You will also need a slow cooker or suitable oven dish. If you wish to eat it to
 12. Add more Salt and Pepper to taste before serving.
 
 **Serving**
+
 Ideally served in a bowl with fresh crusty bread and Guernsey butter to dip. If you have it, try Celery Salt instead of normal salt.
 
 >  Why you probably don't want to add carrots:
