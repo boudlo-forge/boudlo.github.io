@@ -11,17 +11,16 @@ tags: food guernsey winter
 
 **THIS MAKES A BIG (circa 5L) BEAN JAR, IF YOU WANT LESS, HALVE THE INGREDIENTS.**
 
->  The *Necessary* Ingredients
->
-> - 1000g Pork Shoulder
-> - 1000g Large Yellow or White Onions
-> - 500g Dried Haricot or a mix of Haricot & Butter Beans
-> - 500ml Beef Stock, Bovril or Marmite in a pinch.
-> - Oil, butter, dripping or other cooking fats.
-> - Salt, Pepper
-> - Optional: Dried Parsley, Rocquettes Cider
->
->  You will also need a slow cooker or suitable oven dish. If you wish to eat it today, invent a time machine and go back at least 24 hours.
+The *Necessary* Ingredients
+- 1000g Pork Shoulder
+- 1000g Large Yellow or White Onions
+- 500g Dried Haricot or a mix of Haricot & Butter Beans
+- 500ml Beef Stock, Bovril or Marmite in a pinch.
+- Oil, butter, dripping or other cooking fats.
+- Salt, Pepper
+- Optional: Dried Parsley, Rocquettes Cider
+
+You will also need a slow cooker or suitable oven dish. If you wish to eat it today, invent a time machine and go back at least 24 hours.
 
 **The Method:**
 
@@ -45,7 +44,7 @@ tags: food guernsey winter
 
 10. Pour the rest of the stock over the ingredients, add hot water or rocquettes cider if the ingredients aren't covered.
 
-11. Cook on low heat for a minimum of 10 hours. Ideally, cook for 12hours, rest for 6 and then re-heat and stir.
+11. Cook on lowest heat for a minimum of 10 hours. Ideally, cook for 12hours, rest for 6 and then re-heat and stir.
 
 12. Add more Salt and Pepper to taste when serving. Ideally served with fresh crusty bread and Guernsey butter. If you have it, try Celery Salt instead of normal salt.
 
