@@ -9,8 +9,6 @@ tags: food guernsey winter
 
 <!-- excerpt-end -->
 
-## Jim's Bean Jar *(Ultimate Edition)*
-
 >  The *Necessary* Ingredients
 >
 > - 1000g Pork Shoulder
@@ -49,5 +47,5 @@ tags: food guernsey winter
 
 12. Add more Salt and Pepper to taste when serving. Ideally served with fresh crusty bread and Guernsey butter. If you have it, try Celery Salt instead of normal salt.
 
-/* Why you probably don't want to add carrots:
-Carrots add a lot of sugar to the bean jar and if you are planning on eating your bean jar over a couple of days you can end up with an off taste as the sugar begins to ferment after a couple of days. If you're eating it all in one or two sittings then it's less of an issue but really, carrots add little in either flavour or texture in a dish this thoroughly cooked down so it's probably a waste unless you really just need to use them up or something.
+>  Why you probably don't want to add carrots:
+>  Carrots add a lot of sugar to the bean jar and if you are planning on eating your bean jar over a couple of days you can end up with an off taste as the sugar begins to ferment after a couple of days. If you're eating it all in one or two sittings then it's less of an issue but really, carrots add little in either flavour or texture in a dish this thoroughly cooked down so it's probably a waste unless you really just need to use them up or something.
