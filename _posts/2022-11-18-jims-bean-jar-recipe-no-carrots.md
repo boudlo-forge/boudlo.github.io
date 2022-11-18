@@ -9,6 +9,8 @@ tags: food guernsey winter
 
 <!-- excerpt-end -->
 
+**THIS MAKES A BIG (circa 5L) BEAN JAR, IF YOU WANT LESS, HALVE THE INGREDIENTS.**
+
 >  The *Necessary* Ingredients
 >
 > - 1000g Pork Shoulder
@@ -21,7 +23,7 @@ tags: food guernsey winter
 >
 >  You will also need a slow cooker or suitable oven dish. If you wish to eat it today, invent a time machine and go back at least 24 hours.
 
-**THIS MAKES A BIG (circa 5L) BEAN JAR, IF YOU WANT LESS, HALVE THE INGREDIENTS.**
+**The Method:**
 
 1. First, feed the carrots you mistakenly bought to the nearest Donkey, they can't ruin your bean jar then and the Donkey will add to the ambience.
 
