@@ -46,7 +46,10 @@ You will also need a slow cooker or suitable oven dish. If you wish to eat it to
 
 11. Cook on lowest heat for a minimum of 10 hours. Ideally, cook for 12hours, rest for 6 and then re-heat and stir.
 
-12. Add more Salt and Pepper to taste when serving. Ideally served with fresh crusty bread and Guernsey butter. If you have it, try Celery Salt instead of normal salt.
+12. Add more Salt and Pepper to taste before serving.
+
+**Serving**
+Ideally served in a bowl with fresh crusty bread and Guernsey butter to dip. If you have it, try Celery Salt instead of normal salt.
 
 >  Why you probably don't want to add carrots:
 >  Carrots add a lot of sugar to the bean jar and if you are planning on eating your bean jar over a couple of days you can end up with an off taste as the sugar begins to ferment after a couple of days. If you're eating it all in one or two sittings then it's less of an issue but really, carrots add little in either flavour or texture in a dish this thoroughly cooked down so it's probably a waste unless you really just need to use them up or something.
