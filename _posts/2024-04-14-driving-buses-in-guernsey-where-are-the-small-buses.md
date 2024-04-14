@@ -5,7 +5,9 @@ author: Jim Rouse
 tags: guernsey infrastructure transport buses politics
 ---
 
-**Hello**, there has been some recent discussion regarding buses on the island or the lack thereof. Ask practically anyone on Guernsey and you will generally find agreement that the buses should be smaller. You might also hear that there needs to be more. Smaller, more frequent, preferrably electric buses is often proffered like an obvious solution because, well, it is, isn't it?
+**Hello**, there has been some recent discussion regarding buses on the island or the lack thereof. Ask practically anyone on Guernsey and you will generally find agreement that the buses should be smaller. You might also hear that there needs to be more of them. 
+
+Smaller, more frequent, preferrably electric buses is often proffered like an obvious solution because, well, it is, isn't it?
 
 <!-- excerpt-end -->
 
