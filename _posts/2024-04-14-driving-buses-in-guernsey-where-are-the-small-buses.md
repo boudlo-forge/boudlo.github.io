@@ -19,7 +19,7 @@ So why aren't we able to get drivers? Are they all millenial softies, afraid of 
 
 **The National Express Option**
 
-We're going for the average so let's pick the midlands for this example. Birmingham National Express is paying £16.23 an hour for people with 2 years PVC and if you stay there for a year that will increase to £18.23.
+We're going for the average so let's pick the midlands for this example. Birmingham National Express is paying £16.23 an hour for people with 2 years PCV and if you stay there for a year that will increase to £18.23.
 
 If you drive a conservative 40hr week you will pull in a base pay of around **£35-38k per year**. You can legally drive up to 10 hours in a day so if you can drive more you will get paid more. You will also receive:
 - Free National Bus & Coach travel
