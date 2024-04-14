@@ -16,6 +16,7 @@ The crux of the issue, we are told, is staffing. More buses needs more drivers, 
 So why aren't we able to get drivers? Are they all millenial softies, afraid of a hard days graft? Or is there something we're missing. Let's look at this from the perspective of a 2-year qualified PCV (Cat D) Holder in the UK. We're going to assume that they are single or otherwise free to move around alone, with no dependents, etc.
 
 **The National Express Option**
+
 We're going for the average so let's pick the midlands for this example. Birmingham National Express is paying £16.23 an hour for people with 2 years PVC and if you stay there for a year that will increase to £18.23.
 
 If you drive a conservative 40hr week you will pull in a base pay of around **£35-38k per year**. You can legally drive up to 10 hours in a day so if you can drive more you will get paid more. You will also receive:
@@ -33,6 +34,7 @@ If you drive a conservative 40hr week you will pull in a base pay of around **£
 - Discounts on mobile plans
 
 **The Guernsey Offering**
+
 In Guernsey you will get around £16.25 per hour also, and if you drive nights or Sundays you will get £19.50 per hour for those hours. This works out to around £35k a year for an average week. Like the UK you can work extra hours if available. The only difference is there is no legal limit on how many hours you can drive consecutively. There are, however, limits to how many working hours there are in a day because we only have night service on Fridays and Saturdays.
 
 OK so the pay is arguably similar but different, let's look at what benefits you get:
